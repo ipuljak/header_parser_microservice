@@ -17,6 +17,6 @@ app.use(methodOverride('_method'));
 app.use('/', timestamp);
 
 // Server port listen
-app.listen(5000, process.env.IP, () => {
+app.listen(5001, process.env.IP, () => {
   console.log('Timestamp API server started on port 5001.');
 });
