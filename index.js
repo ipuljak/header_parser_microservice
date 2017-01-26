@@ -6,7 +6,7 @@ const express = require('express'),
   app = express();
 
 // Routes requirements
-const timestamp = require('./routes/headers');
+const headers = require('./routes/headers');
 
 // Server setup
 app.use(cors());
@@ -14,7 +14,7 @@ app.use(bodyparser.json({ type: '*/*' }));
 app.use(methodOverride('_method'));
 
 // Server routes
-app.use('/', timestamp);
+app.use('/', headers);
 
 // Server port listen
 app.listen(5001, process.env.IP, () => {
